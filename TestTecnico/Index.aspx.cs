@@ -21,10 +21,11 @@ namespace TestTecnico
 
 
         /// <summary>
-        /// Create New Task
+        /// Agrega un registro a cualquiera de las dos colas
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns>bool value </returns>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <returns></returns>
         [WebMethod]
         public static bool InsertCola(String id,String nombre)
         {
@@ -53,8 +54,12 @@ namespace TestTecnico
 
 
             return response;
-        }
-
+            }
+        /// <summary>
+        /// Actualiza el Listados personas es espera de ser atendidas en las dos colas
+        /// </summary>
+        /// <param name="idcola"></param>
+        /// <returns></returns>
         [WebMethod]
         public static string ActualizarColas(string idcola)
         {
@@ -74,7 +79,12 @@ namespace TestTecnico
             return response;
         }
 
-
+        /// <summary>
+        /// Renderiza las colas por medio de un tabla de html , en el Index de la app
+        /// </summary>
+        /// <param name="ListCola"></param>
+        /// <param name="cola"></param>
+        /// <returns></returns>
         private static string RenderizarTabla(List<Cola> ListCola,int? cola)
         {
             string retorno = "";
@@ -113,8 +123,9 @@ namespace TestTecnico
 
 
         /// <summary>
-        /// List all tasks loaded in the database
+        /// Lista toda las colas cargadas en la BD en funcion del Id
         /// </summary>
+        /// <param name="idcola"></param>
         /// <returns></returns>
         public static List<Cola> ListCola(string idcola)
         {

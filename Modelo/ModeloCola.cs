@@ -27,7 +27,11 @@ namespace Modelo
         }
         #endregion
 
-
+        /// <summary>
+        /// Lista toda las colas cargadas en la BD en funcion del Id
+        /// </summary>
+        /// <param name="cola"></param>
+        /// <returns></returns>
         public List<Cola> ListCola(int cola)
         {
             List<Cola> List = new List<Cola>();
@@ -61,8 +65,12 @@ namespace Modelo
             return List;
         }
 
-        
 
+        /// <summary>
+        /// Agrega un registro a cualquiera de las dos colas
+        /// </summary>
+        /// <param name="objCola"></param>
+        /// <returns></returns>
         public bool InsertCola(Cola objCola)
         {
             SqlConnection con = null;
@@ -92,7 +100,11 @@ namespace Modelo
          
             return response;
         }
-
+        /// <summary>
+        /// Valida si existe registro previamente cargados en la Tabla Cola
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool ValidarRegistro(int id)
         {
             SqlConnection con = null;

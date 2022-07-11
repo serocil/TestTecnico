@@ -246,6 +246,7 @@
     <Content Include="css\morris\morris.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="DataBase\TestTecnico.sql" />
     <Content Include="Index.aspx" />
     <Content Include="js\AdminLTE\app.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -423,7 +424,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataBase\" />
     <Folder Include="img\" />
     <Folder Include="js\plugin\input-mask\phone-codes\" />
   </ItemGroup>
